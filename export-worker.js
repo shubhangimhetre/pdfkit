@@ -4,7 +4,7 @@ function doWork(args, cb) {
   const forked_child_process = childProcess.fork('./execute-worker.js');
 
   const timeout = setTimeout(() => {
-    console.log("Timeout ---------------------------");
+    console.log("Timeout --------------------------");
     forked_child_process.kill();
     if(cb && (typeof cb === 'function')){
       cb(null,null);
